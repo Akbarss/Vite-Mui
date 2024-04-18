@@ -1,18 +1,16 @@
-import { Box, Grow } from "@mui/material";
+import Box from "@mui/material/Box";
 import React from "react";
 import Footer from "./Footer";
-import Header from "./Header";
+import MenuAppBar from "./Header";
 
 const Layout = (props) => {
   const { children } = props;
   return (
-    <Box minHeight="100vh" display="flex" flexDirection="column">
-      <Header />
-      <Grow in mountOnEnter unmountOnExit {...{ timeout: 1680 }}>
-        <Box flex="1" maxHeight="100%">
-          {children}
-        </Box>
-      </Grow>
+    <Box minHeight={"100vh"} display={"flex"} flexDirection={"column"}>
+      <MenuAppBar />
+      <Box flex={1} maxHeight={"100%"}>
+        {children}
+      </Box>
       <Footer />
     </Box>
   );
